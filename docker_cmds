@@ -1,9 +1,9 @@
 docker build -t ubuntu:oracular -f Dockerfile --platform linux/amd64 .
 
-docker run -w /home/minseok/ -it -p 5222:22 -p 5280:80 --name ubuntu --platform linux/amd64 ubuntu:oracular /bin/bash
+docker run -w /home/ubuntu/ -it -p 5222:22 -p 5280:80 --name ubuntu --platform linux/amd64 ubuntu:oracular /bin/bash
 
-docker start ubuntu
+docker start ubuntu_oracular
 
-docker exec -w /home/minseok -it ubuntu /bin/bash
+docker exec -w /home/ubuntu -it ubuntu_oracular /bin/bash
 
-docker stop ubuntu
+docker stop ubuntu_oracular
